@@ -1,0 +1,23 @@
+@color-level-1: #4c4d52;
+
+@color-background: #fafcff;
+@shadow-color: #dddddd;
+
+@typingScreenCount: 5;
+@spotCount: 6;
+
+@spot-color-1: #4d83dc;
+@spot-color-2: #38cb84;
+@spot-color-3: #dd974b;
+@spot-color-4: #956beb;
+@spot-color-5: #df6c60;
+@spot-color-6: #e85fa9;
+
+@spotColorArray: `(function() {
+    this.spotColorArray = this.spotColorArray ? this.spotColorArray : util.shuffle(['@{spot-color-1}', '@{spot-color-2}', '@{spot-color-3}', '@{spot-color-4}', '@{spot-color-5}', '@{spot-color-6}']);
+    return this.spotColorArray;
+})()`;
+@spotAxisArray: `(function() {
+    this.spotAxisArray = this.spotAxisArray ? this.spotAxisArray : util.shuffle([1, 2, 3, 4, 5, 6]);
+    return this.spotAxisArray;
+})()`;

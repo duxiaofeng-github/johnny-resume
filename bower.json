@@ -1,0 +1,23 @@
+{
+  "name": "Johnny Resume",
+  "version": "0.0.1",
+  "homepage": "https://github.com/duxiaofeng-github/johnny-resume",
+  "authors": [
+    "me@imdxf.com"
+  ],
+  "description": "johnny resume project",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "parallax.js": "~1.4.1",
+    "plax": "~1.5.0",
+    "font-awesome": "fontawesome#~4.5.0",
+    "normalize-css": "normalize.css#~3.0.3"
+  }
+}

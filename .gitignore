@@ -1,0 +1,8 @@
+# Mac OSX
+.DS_Store
+# WebStorm
+.idea/
+
+# frontend
+bower_components/
+node_modules/

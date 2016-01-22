@@ -1,0 +1,43 @@
+.container {
+  position: absolute;
+  height: 33.33%;
+  width: 33.33%;
+
+  .container-layout(@count) when (@count <= @spotCount) {
+    @deg: `360/@{spotCount}*"@{spotAxisArray}".split(", ")[@{count}-1]`;
+
+    &.container-@{count} {
+      left: unit(`layoutCaculator.getContainerLeft(@{deg})`, %);
+      top: unit(`layoutCaculator.getContainerTop(@{deg})`, %);
+    }
+
+    .container-layout((@count + 1));
+  }
+
+  .container-layout(1);
+}
+
+.bg{
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background-color: @color-background;
+  transition: background-color .5s ease-out, left .5s ease-out, top .5s ease-out;
+
+  .background-transition(@count) when (@count <= @spotCount) {
+    @deg: `360/@{spotCount}*"@{spotAxisArray}".split(", ")[@{count}-1]`;
+
+    &.bg-@{count}-active {
+      left: unit(`layoutCaculator.getBgTransitionLeft(@{deg})`, %);
+      top: unit(`layoutCaculator.getBgTransitionTop(@{deg})`, %);
+      background-color: color(`"@{spotColorArray}".split(", ")[@{count}-1]`);
+    }
+
+    .background-transition((@count + 1));
+  }
+
+  .background-transition(1);
+}
+
