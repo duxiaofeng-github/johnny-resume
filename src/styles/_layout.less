@@ -2,13 +2,27 @@
   position: absolute;
   height: 33.33%;
   width: 33.33%;
+  color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
 
   .container-layout(@count) when (@count <= @spotCount) {
     @deg: `360/@{spotCount}*"@{spotAxisArray}".split(", ")[@{count}-1]`;
+    @left: `layoutCaculator.getContainerLeft(@{deg})`;
+    @top: `layoutCaculator.getContainerTop(@{deg})`;
 
     &.container-@{count} {
-      left: unit(`layoutCaculator.getContainerLeft(@{deg})`, %);
-      top: unit(`layoutCaculator.getContainerTop(@{deg})`, %);
+      left: unit(@left, %);
+      top: unit(@top, %);
+      padding: ~`@{left} == 0 ? '0 10vmax 0 0' : '0 0 0 10vmax'`;
+    }
+
+    .content-scrollable {
+      position: absolute;
+      top: 10vmax;
+      bottom: 10vmax;
+      left: 10vmax;
+      right: 10vmax;
     }
 
     .container-layout((@count + 1));
@@ -40,4 +54,3 @@
 
   .background-transition(1);
 }
-

@@ -45,11 +45,12 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  overflow: visible;
 
   .screenTyping(1, 0);
 
   .screen-avatar {
-    @typeCompleteTime: `typingCaculator.typingCompleteAt(@{typingScreenCount})`;
+    @typeCompleteTime: 0;//`typingCaculator.typingCompleteAt(@{typingScreenCount})`;
     position: absolute;
     top: 0;
     left: 0;
@@ -111,14 +112,16 @@
     }
 
     .spotBackground(@count) when (@count <= @spotCount) {
-      @scaleRatio: 1.6 - (@count - 1) * 0.1;
       @spotOffset: `(function() {
-          this.spotOffset@{count} = this.spotOffset@{count} ? this.spotOffset@{count} : util.randomInt(140000, 180000) / 100000;
+          this.spotOffset@{count} = this.spotOffset@{count} || util.randomInt(140000, 180000) / 100000;
           return this.spotOffset@{count};
       })()`;
       @length: @spotOffset + 12;
       @deg: `360/@{spotCount}*"@{spotAxisArray}".split(", ")[@{count}-1]`;
-      @degOffset: `util.randomInt(-10, 10)`;
+      @degOffset: `(function() {
+          this.degOffset@{count} = this.degOffset@{count} || util.randomInt(-10, 10);
+          return this.spotOffset@{count};
+      })()`;
       @absDeg: `spotCaculator.getAbsDeg(@{deg}+@{degOffset})`;
       @xAbs: cos(unit(@absDeg, deg)) * @length;
       @x: `@{xAbs} * (@{deg} < 90 || @{deg} >= 270 ? 1 : -1)`;
@@ -163,9 +166,27 @@
         }
       }
 
+      @keyframes ~"spot-@{count}-transition-back" {
+        0% {
+          transform:scale(1);
+          left: ~`spotCaculator.getTransitionLeft(@{deg})`;
+          top: ~`spotCaculator.getTransitionTop(@{deg})`;
+          width: 8vmax - unit(@count/1.3, vmax);
+          padding-top: 8vmax - unit(@count/1.3, vmax);
+          opacity: 1;
+        }
+        100% {
+          transform:scale(1);
+          left: calc(~"50% + @{x}vmax");
+          top: calc(~"50% + @{y}vmax");
+          width: 8vmax - unit(@count/1.3, vmax);
+          padding-top: 8vmax - unit(@count/1.3, vmax);
+          opacity: 1;
+        }
+      }
+
       &.spot-@{count} {
         background-color: color(`"@{spotColorArray}".split(", ")[@{count}-1]`);
-        transform:scale(@scaleRatio);
         font-size: 3vmax - unit(@count/5, vmax);
         margin-left: -(8vmax - unit(@count/1.3, vmax))/2;
         margin-top: -(8vmax - unit(@count/1.3, vmax))/2;
@@ -182,8 +203,16 @@
       }
 
       &.spot-@{count}-transition {
-        animation: ~"spot-@{count}-transition" unit(`util.randomInt(5, 10) / 10`, s) ease-out .3s;
-        animation-fill-mode: forwards;
+        animation: ~"spot-@{count}-bound" unit(`util.randomInt(5, 10) / 10`, s) ease-out unit(@typeCompleteTime + 1, s)+unit(`util.randomInt(5, 10) / 10`, s),
+          ~"spot-@{count}-transition" unit(`util.randomInt(5, 10) / 10`, s) ease-out .3s;
+        animation-fill-mode: forwards, forwards;
+      }
+
+      &.spot-@{count}-transition-back {
+        animation: ~"spot-@{count}-bound" unit(`util.randomInt(5, 10) / 10`, s) ease-out unit(@typeCompleteTime + 1, s)+unit(`util.randomInt(5, 10) / 10`, s),
+          ~"spot-@{count}-transition" unit(`util.randomInt(5, 10) / 10`, s) ease-out .3s,
+          ~"spot-@{count}-transition-back" unit(`util.randomInt(5, 10) / 10`, s) ease-out .3s;
+        animation-fill-mode: forwards, forwards, forwards;
       }
 
       .spotBackground((@count + 1))
@@ -191,16 +220,11 @@
 
     .spot {
       position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 0;
-      height: 0;
-      padding-top: 0;
       border-radius: 50%;
       color: #fff;
       cursor: pointer;
       overflow: hidden;
-      transition: background-color .5s ease-out;
+      transition: all .5s ease-out;
 
       i {
         position: absolute;
