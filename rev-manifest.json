@@ -1,14 +1,14 @@
 {
   "index.html": "index.html",
-  "public/css/app.min.css": "public/css/app.min.4c79142f.css",
-  "public/css/libs.min.css": "public/css/libs.min.fc5b2468.css",
+  "public/css/app.min.css": "public/css/app.min.9288bce7.css",
+  "public/css/libs.min.css": "public/css/libs.min.0ad5c107.css",
   "public/fonts/FontAwesome.otf": "public/fonts/FontAwesome.af129fd5.otf",
   "public/fonts/fontawesome-webfont.eot": "public/fonts/fontawesome-webfont.8366d592.eot",
   "public/fonts/fontawesome-webfont.svg": "public/fonts/fontawesome-webfont.f775f9cc.svg",
   "public/fonts/fontawesome-webfont.ttf": "public/fonts/fontawesome-webfont.fcaf6196.ttf",
   "public/fonts/fontawesome-webfont.woff": "public/fonts/fontawesome-webfont.32cd20dd.woff",
   "public/fonts/fontawesome-webfont.woff2": "public/fonts/fontawesome-webfont.f3fc6e17.woff2",
-  "public/images/avatar.png": "public/images/avatar.1cf2696c.png",
-  "public/js/app.min.js": "public/js/app.min.0bcab1d5.js",
-  "public/js/libs.min.js": "public/js/libs.min.210b8c7c.js"
+  "public/js/app.min.js": "public/js/app.min.279005ac.js",
+  "public/js/libs.min.js": "public/js/libs.min.8f5f8dd2.js",
+  "public/images/avatar.png": "public/images/avatar.1cf2696c.png"
 }

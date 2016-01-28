@@ -46,11 +46,12 @@
   align-items: center;
   z-index: 1;
   overflow: visible;
+  color: @color-level-1;
 
   .screenTyping(1, 0);
 
   .screen-avatar {
-    @typeCompleteTime: 0;//`typingCaculator.typingCompleteAt(@{typingScreenCount})`;
+    @typeCompleteTime: `typingCaculator.typingCompleteAt(@{typingScreenCount})`;
     position: absolute;
     top: 0;
     left: 0;

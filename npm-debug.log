@@ -1,0 +1,79 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/johnny/.nvm/v0.11.14/bin/node',
+1 verbose cli   '/Users/johnny/.nvm/v0.11.14/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'bubbletree' ]
+2 info using npm@2.0.0
+3 info using node@v0.11.14
+4 warn package.json johnny-resume@0.0.1 No description
+5 warn package.json johnny-resume@0.0.1 No repository field.
+6 warn package.json johnny-resume@0.0.1 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'bubbletree', null ]
+9 verbose cache add spec="bubbletree" args=["bubbletree",null]
+10 verbose parsed spec { raw: 'bubbletree',
+10 verbose parsed spec   scope: null,
+10 verbose parsed spec   name: 'bubbletree',
+10 verbose parsed spec   rawSpec: '',
+10 verbose parsed spec   spec: '*',
+10 verbose parsed spec   type: 'range' }
+11 verbose parsed spec { raw: 'bubbletree',
+11 verbose parsed spec   scope: null,
+11 verbose parsed spec   name: 'bubbletree',
+11 verbose parsed spec   rawSpec: '',
+11 verbose parsed spec   spec: '*',
+11 verbose parsed spec   type: 'range' }
+12 verbose addNamed [ 'bubbletree', '*' ]
+13 verbose addNamed [ null, '*' ]
+14 silly lockFile d9f6a1bb-bubbletree bubbletree@*
+15 verbose lock bubbletree@* /Users/johnny/.npm/d9f6a1bb-bubbletree.lock
+16 silly addNameRange { name: 'bubbletree', range: '*', hasData: false }
+17 verbose mapToRegistry name bubbletree
+18 verbose mapToRegistry uri https://registry.npmjs.org/bubbletree
+19 verbose request on initialization, where is /bubbletree
+20 verbose request after pass 1, where is /bubbletree
+21 verbose request url raw /bubbletree
+22 verbose request resolving registry [ 'https://registry.npmjs.org/', './bubbletree' ]
+23 verbose request after pass 2, where is https://registry.npmjs.org/bubbletree
+24 verbose request no auth needed
+25 info attempt registry request try #1 at 00:19:35
+26 verbose request id 4a02efa188492a9f
+27 http request GET https://registry.npmjs.org/bubbletree
+28 http 404 https://registry.npmjs.org/bubbletree
+29 silly registry.get cb [ 404,
+29 silly registry.get   { 'content-type': 'application/json',
+29 silly registry.get     'cache-control': 'max-age=0',
+29 silly registry.get     'content-length': '2',
+29 silly registry.get     'accept-ranges': 'bytes',
+29 silly registry.get     date: 'Tue, 26 Jan 2016 16:19:37 GMT',
+29 silly registry.get     via: '1.1 varnish',
+29 silly registry.get     age: '0',
+29 silly registry.get     connection: 'close',
+29 silly registry.get     'x-served-by': 'cache-itm7424-ITM',
+29 silly registry.get     'x-cache': 'MISS',
+29 silly registry.get     'x-cache-hits': '0',
+29 silly registry.get     'x-timer': 'S1453825176.706874,VS0,VE1139' } ]
+30 silly lockFile d9f6a1bb-bubbletree bubbletree@*
+31 silly lockFile d9f6a1bb-bubbletree bubbletree@*
+32 verbose stack Error: Not Found
+32 verbose stack     at errorResponse (/Users/johnny/.nvm/v0.11.14/lib/node_modules/npm/lib/cache/add-named.js:267:10)
+32 verbose stack     at setData (/Users/johnny/.nvm/v0.11.14/lib/node_modules/npm/lib/cache/add-named.js:210:12)
+32 verbose stack     at saved (/Users/johnny/.nvm/v0.11.14/lib/node_modules/npm/node_modules/npm-registry-client/lib/get.js:167:7)
+32 verbose stack     at Object.oncomplete (fs.js:93:15)
+33 verbose statusCode 404
+34 verbose pkgid bubbletree
+35 verbose cwd /Users/johnny/myFiles/johnny-resume
+36 error Darwin 15.2.0
+37 error argv "/Users/johnny/.nvm/v0.11.14/bin/node" "/Users/johnny/.nvm/v0.11.14/bin/npm" "install" "bubbletree"
+38 error node v0.11.14
+39 error npm  v2.0.0
+40 error code E404
+41 error 404 Not Found
+41 error 404
+41 error 404 'bubbletree' is not in the npm registry.
+41 error 404 You should bug the author to publish it (or use the name yourself!)
+41 error 404 It was specified as a dependency of 'johnny-resume'
+41 error 404
+41 error 404 Note that you can also install from a
+41 error 404 tarball, folder, http url, or git url.
+42 verbose exit [ 1, true ]
