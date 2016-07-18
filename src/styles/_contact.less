@@ -1,0 +1,57 @@
+.contact {
+  h2 {
+    margin-top: 40px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .contacts {
+    position: relative;
+
+    .github {
+      position: absolute;
+
+      &:hover {
+        i {
+          transform: rotateY(180deg);
+        }
+      }
+      
+      i {
+        font-size: 150px;
+        transition: transform .5s ease-out;
+      }
+    }
+
+    p {
+      font-weight: lighter;
+      margin: 0px;
+      margin-left: 190px;
+      font-size: 24px;
+      line-height: 150px / 3;
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .links {
+    padding-left: 0px;
+    font-size: 0;
+
+    li {
+      display: inline-block;
+      width: 25%;
+      font-size: 1rem;
+      line-height: 2em;
+    }
+  }
+}

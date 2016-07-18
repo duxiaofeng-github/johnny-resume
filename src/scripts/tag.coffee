@@ -41,9 +41,9 @@ $ ->
   ]
 
   scaleRatio = 3
-  charMin = 10 * scaleRatio
+  charMin = 40 * scaleRatio
   charMax = 160 * scaleRatio
-  charCount = 90
+  charCount = 150
   wordUsed = [].concat word
   wordArray = []
   resizeTimer = null
@@ -55,7 +55,7 @@ $ ->
   wordUsed = _.shuffle wordUsed
 
   for i in [1..wordUsed.length] by 1
-    ratio = 1 / (i + 3) * 4
+    ratio = 1 / (i + 2) * 3
     size = charMax * ratio
 
     size = if size < charMin then charMin else size
@@ -68,6 +68,7 @@ $ ->
     fontFamily: '"Alright Sans LP", "Avenir Next", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Source Han Sans SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi MicroHei", sans-serif'
     rotateRatio: 1
     gridSize: 30
+    clearCanvas: true
     shuffle: true
 
   repaint = ->
@@ -83,4 +84,11 @@ $ ->
       repaint()
     , 250
 
-  repaint()
+  $('.js-spot[data-spot="4"]').on 'click', ->
+    if !$(this).hasClass("spot-#{$(this).attr('data-spot')}-transition")
+      setTimeout ->
+        $('#tag-cloud').show()
+        repaint()
+      , 1000
+    else
+      $('#tag-cloud').fadeOut()

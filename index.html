@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <title>杜晓峰的简历</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link href="./public/css/libs.min.0ad5c107.css" rel="stylesheet" type="text/css">
-    <link href="./public/css/app.min.9288bce7.css" rel="stylesheet" type="text/css">
+    <link href="./public/css/libs.min.3de7028e.css" rel="stylesheet" type="text/css">
+    <link href="./public/css/app.min.8ce85b38.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="bg js-bg">
       <div class="welcome container">
-  <div class="screen-typing-1">您好</div>
+  <!-- <div class="screen-typing-1">您好</div>
   <div class="screen-typing-2">我是杜晓峰</div>
   <div class="screen-typing-3">很高兴遇见你</div>
   <div class="screen-typing-4">如果你想了解我</div>
-  <div class="screen-typing-5">请跟我来</div>
+  <div class="screen-typing-5">请跟我来</div> -->
   <div class="screen-avatar">
     <div class="spot spot-1 js-spot" data-spot="1"><i class="fa fa-quote-right"></i></div>
     <div class="spot spot-2 js-spot" data-spot="2"><i class="fa fa-code"></i></div>
     <div class="spot spot-3 js-spot" data-spot="3"><i class="fa fa-bar-chart"></i></div>
     <div class="spot spot-4 js-spot" data-spot="4"><i class="fa fa-tags"></i></div>
-    <div class="spot spot-5 js-spot" data-spot="5"><i class="fa fa-picture-o"></i></div>
+    <div class="spot spot-5 js-spot" data-spot="5"><i class="fa fa-lightbulb-o"></i></div>
     <div class="spot spot-6 js-spot" data-spot="6"><i class="fa fa-link"></i></div>
     <div class="avatar-wrapper">
       <span class="background-wave max"></span>
@@ -31,24 +31,98 @@
   </div>
 </div>
       <div class="container container-1 intro">
-  <div class="intro-content content-scrollable">
-    <h1>
-      我的简介
-    </h1>
+  <h1 class="page-title">
+    我的简介
+  </h1>
 
-    <p>
-      我叫杜晓峰，来自广东汕头。
-    </p>
-    <p>
-      热爱前端，喜欢折腾，相信新技术是推进生产力发展的要素。技术偏向工程化，关注能够提高工作效率，工程质量的东西。
-    </p>
-    <p>平时没事会研究一些新技术，关注一些新的东西，在日新月异的世界里探索未来。</p>
-    <p>
-      人不是很闷骚，喜欢呆在一个自由的环境中，和喜欢的人做有趣的事情。工作不止是工作，更是一种理想。同事也不止是同事，更是家人和朋友。有激情和目标，才能把一个事情做好。
-    </p>
+  <div class="intro-content content-scrollable">
+    <div class="info">
+      <img class="avatar" src="./public/images/avatar.1cf2696c.png">
+      <p>姓名：杜晓峰</p>
+      <p>现居地：上海</p>
+      <p>职位：前端工程师</p>
+    </div>
+
+    <div class="introduction">
+      <p>
+        我叫杜晓峰，热爱前端，喜欢折腾，相信新技术是推进生产力发展的要素。技术偏向工程化，关注能够提高工作效率，工程质量的东西。
+      </p>
+      <p>平时没事会研究一些新技术，关注一些新的东西，在日新月异的世界里探索未来。</p>
+      <p>
+        喜欢自由的环境，喜欢有趣的人。工作不止是工作，更是一种理想。同事不止是同事，更是家人和朋友。有激情和目标，才能把一个事情做好。
+      </p>
+    </div>
   </div>
 </div>
-      <div class="container container-2 code">code</div>
+      <div class="container container-2 code">
+  <h1 class="page-title">我的项目</h1>
+
+  <div class="content-scrollable">
+    <div class="code-time-line">
+      <div class="block">
+        <h2>七牛开发者平台V2</h2>
+        <div class="content">
+          <p>这个项目是入职七牛的时候，最初的一个管理平台。入职之后，我引入了grunt、less以及coffeescript，来解决构建及原生的css及js的各种不便。后面嫌grunt太啰嗦，换成gulp。后端用的revel，模板由后端渲染。</p>
+          <p>随着业务发展，功能复杂度增加，这个项目逐渐失控。主要问题在于js的模块化，依赖问题，以及后端数据和前端展示逻辑的耦合。</p>
+          <p>jquery对DOM结构的直接频繁的操作，又没有很好的代码规范约束，导致可读性及可维护性直线下降。</p>
+          <p>以上的各种问题，实际上也是近几年Web端发展所遇到问题的一个栗子。</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2>七牛虚拟机管理平台</h2>
+        <div class="content">
+          <p>维护开发平台V2版本一年左右之后，重组另一个项目组，负责开发七牛的虚拟机平台。</p>
+          <p>我的职责是前端架构，项目管理。接收需求，安排功能的开发时间点。当然，四个人一个team，我要做一些开发的工作。</p>
+          <p>为了解决V2版本遇到的问题，所以引入angular。这个框架很好的解决了模块化的问题，mvc之间的职责相对分明，代码的可读性和可维护性大大提高了。同时angular解决了另一些问题，例如数据绑定、依赖注入、路由、以及xss。</p>
+          <p>前端和后端的数据通信，使用restful的api，json格式，基本满足需求，达到剥离数据和前端展示逻辑的问题，后端变成一个数据源。</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2>七牛开发者平台V3</h2>
+        <div class="content">
+          <p>维护虚拟机平台半年之后，重组又一个项目组，开发新版的开发者平台。</p>
+          <p>目标是集成七牛的几个子产品平台，以及官网，文档站等。</p>
+          <p>前端同样是angular，less+coffeescript，gulp+bower+npm。后端使用内部开发的一个go注入式框架，写代码只需要关注输入输出，数据表结构，以及业务逻辑，效率再次提升很多。</p>
+          <p>主站和子站之间使用oauth授权，公用顶栏使用iframe嵌入。这个方案boss拍板，最后实践下来，功能虽可以实现，但体验实在是一坨狗屎。想象下子站之间不停跳转loading就知道了。</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2>七牛开发者平台V4</h2>
+        <div class="content">
+          <p>作为一个不折腾会死星人，我们又开始折腾开发者平台的V4版本。</p>
+          <p>目标同样是集成子产品。</p>
+          <p>和V3不同的是，V4只有一个站点，将子产品当成功能模块，代码也在一个库中维护。</p>
+          <p>实践结果是，在一个站点内操作，体验好了很多。但后续可能还有问题，随着产品的增加，团队的拆分，拆库是必然的。有可能还会拆分子站，所以最后可能还要上根cookie来共享各种状态。</p>
+          <p>这个架构也并非完美，angular本身也有诸多问题，例如对于第三方插件的不友好（因为angular是不推荐直接操作dom的，所以必须在他的规范下玩耍），以及seo的不友好（prerender作为一个解决方案，也不是很nice）。coffee这个语法糖，也没有解决原生js的问题，例如一些现代语言的特性（interface、具名参数等）。</p>
+          <p>基于以上的问题，可能会尝试react和typescript或者原生的es6。</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2>帮个忙</h2>
+        <div class="content">
+          <p>这个项目是一个纯静态的产品官网，是一个业余项目。</p>
+          <p>用到的东西不多，玩了下视差交互，html5的video，svg，还有css3的3d transform。</p>
+          <p>当然，对古代的浏览器不友好。</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <h2>优爱创</h2>
+        <div class="content">
+          <p>另一个业余项目，一个设计外包平台。</p>
+          <p>功能包含官网（作品、设计师、需求方的展示），管理后台（注册登录、需求发布、作品管理、身份认证、支付、订单、通知等）。</p>
+          <p>这个项目第一次引入docker，好处太多。对开发环境的统一，对测试数据的统一，对构建、测试环境的统一，对服务之间的依赖，对部署的快捷和可扩展性，都有诸多好处。有利于减少出现人生三大错觉之一（妈的，为什么本地环境好好地，到测试、线上环境又挂了）</p>
+          <p>服务都实现docker化之后，本地开发只需要一个docker-compose up，就能启动所有的依赖服务，并且关系明确。集成测试也只需每次启动一组容器，并且灌入准备好的数据，测试完成后销毁，避免数据污染以及资源浪费。线上环境更不必说，横向扩展的代价非常小，增减容器都十分方便。再使用daocloud的服务，把服务器维护扔出去，写完代码终于能睡个好觉了。</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
       <div class="container container-3 chart">
   <div id="skills" class="bubbletree"></div>
 </div>
@@ -57,10 +131,61 @@
     <canvas id="tag-cloud" class="tag-cloud">
   </div>
 </div>
-      <div class="container container-5 lib">lib</div>
-      <div class="container container-6 contact">contact</div>
+      <div class="container container-5 idea">idea</div>
+      <div class="container container-6 contact">
+  <h1 class="page-title">联系方式</h1>
+
+  <div class="contact-content content-scrollable">
+    <div class="contacts">
+      <a class="github" href="https://github.com/duxiaofeng-github" target="_blank">
+        <i class="fa fa-github"></i>
+      </a>
+
+      <p>
+        <i class="fa fa-phone"></i>
+        13127780269
+      </p>
+      <p>
+        <i class="fa fa-envelope"></i>
+        <a href="mailto:me@imdxf.com">me@imdxf.com</a>
+      </p>
+      <p>
+        <i class="fa fa-home"></i>
+        <a href="http://www.imdxf.com" target="_blank">www.imdxf.com</a>
+      </p>
+    </div>
+
+    <h2>
+      不定时出没于以下网站
+    </h2>
+
+    <ul class="links">
+      <li>
+        <a href="http://stackoverflow.com" target="_blank">stackoverflow.com</a>
+      </li>
+      <li>
+        <a href="http://segmentfault.com" target="_blank">segmentfault.com</a>
+      </li>
+      <li>
+        <a href="http://div.io" target="_blank">div.io</a>
+      </li>
+      <li>
+        <a href="http://www.w3cplus.com/">w3cplus.com</a>
+      </li>
+      <li>
+        <a href="http://gold.xitu.io/">gold.xitu.io</a>
+      </li>
+      <li>
+        <a href="http://www.html-js.com/">html-js.com</a>
+      </li>
+      <li>
+        <a href="http://codepen.io/">codepen.io</a>
+      </li>
+    </ul>
+  </div>
+</div>
     </div>
     <script type="text/javascript" src="./public/js/libs.min.8f5f8dd2.js"></script>
-    <script type="text/javascript" src="./public/js/app.min.279005ac.js"></script>
+    <script type="text/javascript" src="./public/js/app.min.0deef6cd.js"></script>
   </body>
 </html>

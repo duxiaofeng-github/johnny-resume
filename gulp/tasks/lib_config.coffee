@@ -13,6 +13,7 @@ module.exports =
       "#{globalOpt.libPath}/normalize-css/normalize.css"
       "#{globalOpt.libPath}/perfect-scrollbar/css/perfect-scrollbar.min.css"
       "#{globalOpt.libPath}/bubbletree/dist/bubbletree.css"
+      "#{globalOpt.libPath}/animate.css/animate.min.css"
     ]
     dest: "#{globalOpt.resourcePath}/public/css/"
 

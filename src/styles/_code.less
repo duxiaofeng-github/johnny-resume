@@ -1,0 +1,33 @@
+.code {
+  .code-time-line {
+    margin-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-left: solid 2px #fff;
+
+    .block {
+      position: relative;
+      padding: 0 30px;
+      margin-top: 50px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      p {
+        text-indent: 2em;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        top: 12px;
+        left: -5px;
+        background-color: #fff;
+        border-radius: 5px;
+      }
+    }
+  }
+}
